@@ -1,15 +1,16 @@
-library 'pipeline'
+@Library('pipeline') _
 
 timestamps {
    node {
       echo 'Hello World'
 
-      stage('calling function'){
-         JenkinsPipelineVars()
+      stage('Build'){
+         sh "pwd"
+         sh "ls"
       }
 
-      stage('calling function diff'){
-         JenkinsPipelineVars 
+      stage('Test'){
+         JenkinsPipelineVars() 
       }
    }
 }
