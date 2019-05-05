@@ -3,4 +3,4 @@
 pwd
 echo "$0"
 echo "$?"
-python3 --version
+python --version
