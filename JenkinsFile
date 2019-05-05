@@ -7,7 +7,9 @@ timestamps {
       stage('Build'){
          sh "pwd"
          sh "ls"
-         sh "python3 build.py"
+         dir('test-jenkins-pipeline'){
+            sh "python3 build.py"
+         }
          JenkinsPipelineVars() 
       }
 
