@@ -5,11 +5,17 @@ timestamps {
       echo 'Hello World'
 
       stage('Build'){
-         sh "pwd"
+         sh "python3 build.py"
+         JenkinsPipelineVars() 
       }
 
       stage('Test'){
+         sh "python3 test.py"
          JenkinsPipelineVars() 
+      }
+      
+      stage('Promote'){
+         echo "Promote to functional"
       }
    }
 }
