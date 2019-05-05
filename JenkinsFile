@@ -1,18 +1,15 @@
-@Library('pipeline') _
+library 'pipeline'
 
 timestamps {
    node {
-      stage('Build'){
-         python3 build.py
+      echo 'Hello World'
+
+      stage('calling function'){
+         JenkinsPipelineVars()
       }
-   
-      stage('Test'){
-         python3 test.py
-      }
-      
-      stage('Promote'){
-         echo 'Build promoted to functional'
+
+      stage('calling function diff'){
+         JenkinsPipelineVars 
       }
    }
 }
-
