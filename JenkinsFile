@@ -1,7 +1,7 @@
-library 'pipeline'
-pipeline {
+@Library('pipeline') _
+
 timestamps {
-   node {
+   node('any') {
       stage('Build'){
          python3 build.py
       }
@@ -15,4 +15,4 @@ timestamps {
       }
    }
 }
-}
+
