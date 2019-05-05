@@ -1,7 +1,7 @@
 @Library('pipeline') _
 
 timestamps {
-   node('any') {
+   node {
       stage('Build'){
          python3 build.py
       }
