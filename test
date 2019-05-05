@@ -2,3 +2,4 @@
 
 pwd
 echo "$0"
+echo "$?"
