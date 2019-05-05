@@ -5,6 +5,8 @@ timestamps {
       echo 'Hello World'
 
       stage('Build'){
+         sh "pwd"
+         sh "ls"
          sh "python3 build.py"
          JenkinsPipelineVars() 
       }
