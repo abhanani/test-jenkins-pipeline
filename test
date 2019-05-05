@@ -1,6 +1,0 @@
-#!/bin/bash
-
-pwd
-echo "$0"
-echo "$?"
-python3.6 --version
