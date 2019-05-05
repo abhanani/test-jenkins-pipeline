@@ -1,0 +1,11 @@
+library 'pipeline'
+
+node {
+   echo 'Hello World'
+   stage('calling function'){
+   JenkinsPipelineVars()
+   }
+   stage('calling function diff'){
+   JenkinsPipelineVars 
+   }
+}
