@@ -5,8 +5,8 @@ timestamps {
       echo 'Hello World'
 
       stage('Build'){
-         sh "pwd"
-         sh "ls"
+         pwd
+         ls
       }
 
       stage('Test'){
