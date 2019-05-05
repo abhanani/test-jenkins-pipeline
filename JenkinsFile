@@ -1,14 +1,16 @@
 library 'pipeline'
 timestamps {
    node {
-      echo 'Hello World'
-   
-      stage('calling function'){
-         JenkinsPipelineVars()
+      stage('Build'){
+         python3 build.py
       }
    
-      stage('calling function diff'){
-         JenkinsPipelineVars 
+      stage('Test'){
+         python3 test.py
+      }
+      
+      stage('Promote'){
+         echo 'Build promoted to functional'
       }
    }
 }
