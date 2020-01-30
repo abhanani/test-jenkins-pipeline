@@ -1,4 +1,4 @@
-def call(nodeName, dc, environment, imageName){
+def call(nodeName, String dc, String environment, String imageName) {
 
   def post = new URL("http://dynconfig.$dc.tivo.com:50000/dynconfigServerStore").openConnection();
   def message = '{"type": "dynconfigServerStore", "server": {"container": ["$imageName"],"environment": "$environment","name": "$nodeName"}}'
