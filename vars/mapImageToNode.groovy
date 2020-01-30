@@ -7,6 +7,8 @@ def call() {
   post.setRequestProperty("Content-Type", "application/json")
   post.getOutputStream().write(message.getBytes("UTF-8"));
   def postRC = post.getResponseCode();
+  println("$postRC")
+  println("$post.content")
   if(postRC.equals(200)) {
       return true
   }
