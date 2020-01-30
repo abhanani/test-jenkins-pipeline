@@ -1,7 +1,7 @@
-def call(nodeName, String dc, String environment, String imageName) {
+def call() {
 
-  def post = new URL("http://dynconfig.$dc.tivo.com:50000/dynconfigServerStore").openConnection();
-  def message = '{"type": "dynconfigServerStore", "server": {"container": ["$imageName"],"environment": "$environment","name": "$nodeName"}}'
+  def post = new URL("http://dynconfig.qea1.tivo.com:50000/dynconfigServerStore").openConnection();
+  def message = '{"type": "dynconfigServerStore","server": {"container":["docker.tivo.com/abhanani/station-policy-service:latest"],"environment": "usqe3","name": "stationPolicyServic-usqe3-02.qea1.tivo.com"}'
   post.setRequestMethod("POST")
   post.setDoOutput(true)
   post.setRequestProperty("Content-Type", "application/json")
