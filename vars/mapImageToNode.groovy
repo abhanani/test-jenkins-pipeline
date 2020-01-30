@@ -1,15 +1,4 @@
 def call(String nodeName, String dc, String environment, String imageName) {
-  def dynconfigUrl = 'http://dynconfig.$dc.tivo.com:50000/dynconfigServerStore"
-  def response = [
-    "curl", 
-    "--location", 
-    "--request", 
-    "POST", 
-    "$dynconfigUrl", 
-    "--header", "Content-Type: application/json", 
-    "--data-raw", 
-    '{"type": "dynconfigServerStore", "server": {"container": ["$imageName"],"environment": "$environment","name": "$nodeName"}}'].execute().text
-   
   def post = new URL("http://dynconfig.$dc.tivo.com:50000/dynconfigServerStore").openConnection();
   def message = '{"type": "dynconfigServerStore", "server": {"container": ["$imageName"],"environment": "$environment","name": "$nodeName"}}'
   post.setRequestMethod("POST")
