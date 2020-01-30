@@ -1,4 +1,4 @@
-def call(Map args) {
+def call(Map args){
   
   String nodeName = args.nodeName
   String dc = args.dc
