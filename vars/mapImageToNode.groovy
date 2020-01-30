@@ -1,6 +1,6 @@
 def call(Map args){
   
-  def  nodeName = args.nodeName
+  def nodeName = args.nodeName
   def dc = args.dc
   def environment = args.environment
   def imageName = args.imageName
