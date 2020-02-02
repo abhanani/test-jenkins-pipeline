@@ -1,5 +1,3 @@
-import hudson.model.*
-
 def call(Map args) {
   String node = args.node
   String dc = args.dc
