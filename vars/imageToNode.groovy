@@ -3,8 +3,9 @@ def call(Map args) {
   def dc = args.dc
   def image = args.image
   def env = args.env
-  def post = new URL("http://dynconfig.$dc.tivo.com:50000/dynconfigServerStore").openConnection();
-  def message = '{"type": "dynconfigServerStore","server": {"container":["$image"],"environment": "$env","name": "$node"}}'
+  
+  def post = new URL("http://dynconfig.${dc}.tivo.com:50000/dynconfigServerStore").openConnection();
+  def message = '{"type": "dynconfigServerStore","server": {"container":["${image}"],"environment": "${env}","name": "${node}"}}'
   post.setRequestMethod("POST")
   post.setDoOutput(true)
   post.setRequestProperty("Content-Type", "application/json")
