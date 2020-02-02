@@ -16,7 +16,7 @@ def call() {
   }
 }
 
-def call(node, dc, image, env) {
+def call(node, dc, image, env, closure) {
   def post = new URL("http://dynconfig.$dc.tivo.com:50000/dynconfigServerStore").openConnection();
   def message = '{"type": "dynconfigServerStore","server": {"container":["$image"],"environment": "$env","name": "$node"}}'
   post.setRequestMethod("POST")
