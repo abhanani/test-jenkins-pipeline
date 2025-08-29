@@ -12,7 +12,6 @@ def call(Map args) {
   post.getOutputStream().write(message.getBytes("UTF-8"));
   def postRC = post.getResponseCode();
   
-
   if(postRC.equals(200)) {
       return true
   }
