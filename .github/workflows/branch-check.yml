@@ -1,4 +1,4 @@
-name: Check PR Branch Up-to-Date
+name: Mandate updateBranch
 
 on:
   pull_request:
