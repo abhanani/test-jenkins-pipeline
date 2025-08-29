@@ -16,6 +16,9 @@ def run_git_command(command):
 def check_branch_update():
     base_branch = os.getenv('GITHUB_BASE_REF', 'main')
     head_branch = os.getenv('GITHUB_HEAD_REF', '')
+    if not head_branch:
+        print("Error: GITHUB_HEAD_REF environment variable is not set or is empty. Cannot proceed.")
+        sys.exit(1)
     
     print(f"Checking if PR branch '{head_branch}' is up to date with '{base_branch}'")
     
