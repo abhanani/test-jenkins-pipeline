@@ -5,9 +5,12 @@ on:
 
 jobs:
   check_branch:
+    name: "Branch Update Check"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Run branch update check
         env:
           GITHUB_BASE_REF: ${{ github.base_ref }}
